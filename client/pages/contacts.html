@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Контакты</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Контакты</h1>
+
+    <nav>
+      <a href="../index.html">Главная</a>
+      <a href="about.html">О компании</a>
+      <a href="services.html">Услуги</a>
+      <a href="portfolio.html">Портфолио</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="contact-section">
+
+      <h2>Связаться с нами</h2>
+
+      <p>
+        Оставьте заявку, и мы свяжемся с вами для консультации.
+      </p>
+
+      <form id="contact-form" class="contact-form">
+
+        <div>
+          <label for="name">Имя:</label>
+
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="phone">Телефон:</label>
+
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="email">Email:</label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="service_type">Услуга:</label>
+
+          <select
+            id="service_type"
+            name="service_type"
+            required
+          >
+            <option value="">
+              Выберите услугу
+            </option>
+
+            <option value="Строительство частных домов">
+              Строительство частных домов
+            </option>
+
+            <option value="Коммерческое строительство">
+              Коммерческое строительство
+            </option>
+
+            <option value="Ремонт и отделка">
+              Ремонт и отделка
+            </option>
+
+            <option value="Проектирование">
+              Проектирование
+            </option>
+
+            <option value="Реконструкция зданий">
+              Реконструкция зданий
+            </option>
+          </select>
+        </div>
+
+        <div>
+          <label for="message">Сообщение:</label>
+
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+          ></textarea>
+        </div>
+
+        <div>
+          <label>
+            <input
+              type="checkbox"
+              id="personal_data_consent"
+              required
+            >
+
+            Я согласен на обработку персональных данных
+          </label>
+        </div>
+
+        <button type="submit">
+          Отправить заявку
+        </button>
+
+      </form>
+
+      <p id="form-message"></p>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Construction Company</p>
+  </footer>
+
+  <script src="../js/forms.js"></script>
+
+</body>
+</html>
