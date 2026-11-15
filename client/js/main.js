@@ -1,47 +1,31 @@
-const servicesContainer =
-  document.getElementById('services-container');
-
-async function loadServices() {
-  try {
-    const response = await fetch('/api/services');
-
-    if (!response.ok) {
-      throw new Error('Failed to load services');
+(() => {
+    const el = document.getElementById('services-container');
+    if (!el) return;
+    fetch('/api/services').then(r => {
+        if (!r.ok) throw Error();
+        return r.json()
     }
-
-    const services = await response.json();
-
-    renderServices(services);
-
-  } catch (error) {
-    console.error(error);
-
-    servicesContainer.textContent =
-      'Не удалось загрузить услуги.';
-  }
+    ).then(items => {
+        el.replaceChildren();
+        if (!items.length) {
+            el.textContent = 'Дополнительных услуг пока нет.';
+            return
+        }
+        items.forEach(s => {
+            const a = document.createElement('article');
+            a.className = 'dynamic-card';
+            const h = document.createElement('h3');
+            h.textContent = s.title;
+            const p = document.createElement('p');
+            p.textContent = s.description;
+            a.append(h, p);
+            el.append(a)
+        }
+        )
+    }
+    ).catch(() => {
+        el.textContent = 'Дополнительный каталог временно недоступен.'
+    }
+    )
 }
-
-function renderServices(services) {
-  servicesContainer.innerHTML = '';
-
-  if (services.length === 0) {
-    servicesContainer.textContent =
-      'Услуги пока не добавлены.';
-
-    return;
-  }
-
-  services.forEach((service) => {
-    const article = document.createElement('article');
-
-    article.innerHTML = `
-      <h3>${service.title}</h3>
-
-      <p>${service.description}</p>
-    `;
-
-    servicesContainer.appendChild(article);
-  });
-}
-
-loadServices();
+)();

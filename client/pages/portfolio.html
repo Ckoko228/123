@@ -1,42 +1,268 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Портфолио</title>
-
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/responsive.css">
-</head>
-<body>
-
-  <header>
-    <h1>Наши проекты</h1>
-
-    <nav>
-      <a href="../index.html">Главная</a>
-      <a href="about.html">О компании</a>
-      <a href="services.html">Услуги</a>
-      <a href="portfolio.html">Портфолио</a>
-      <a href="contacts.html">Контакты</a>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="5 Seasons — строительство домов, фундаменты, кровля, фасады и отделка. Консультация и заявка онлайн." name="description"/>
+  <title>
+   Портфолио | 5 Seasons
+  </title>
+  <script>
+   try{if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark-theme')}catch(e){}
+  </script>
+  <link href="../css/style.css" rel="stylesheet"/>
+  <link href="../css/responsive.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header class="site-header">
+   <div class="header-inner">
+    <a aria-label="5 Seasons — главная" class="site-logo" href="../index.html">
+     <img class="site-logo-image" src="../images/logo.png" alt="Логотип 5 Seasons" width="104" height="100"/>
+    </a>
+    <button aria-controls="main-nav" aria-expanded="false" aria-label="Открыть меню" class="menu-toggle">
+     ☰
+    </button>
+    <nav aria-label="Основная навигация" class="main-nav" id="main-nav">
+     <a class="" href="../index.html">
+      Главная
+     </a>
+     <a class="" href="about.html">
+      О компании
+     </a>
+     <a class="" href="services.html">
+      Услуги
+     </a>
+     <a class="active" href="portfolio.html">
+      Портфолио
+     </a>
+     <a class="" href="contacts.html">
+      Контакты
+     </a>
     </nav>
+    <button aria-label="Переключить тему" class="theme-toggle" id="theme-toggle" type="button">
+     <img alt="" id="theme-icon" src="../images/moon.png"/>
+    </button>
+   </div>
   </header>
-
   <main>
-    <section>
-      <h2>Выполненные проекты</h2>
-
-<div id="projects-container" class="cards-grid">
-  Загрузка проектов...
-</div>
-    </section>
+   <section class="page-hero container">
+    <span class="eyebrow">
+     ГАЛЕРЕЯ 5 SEASONS
+    </span>
+    <h1>
+     Работы, которые
+     <em>
+      говорят за себя.
+     </em>
+    </h1>
+    <p>
+     Подборка фотографий из архива компании. Выберите категорию и откройте изображение для просмотра.
+    </p>
+   </section>
+   <section class="container section compact">
+    <div aria-label="Фильтры галереи" class="filter-bar" role="group">
+     <button class="filter-btn selected" data-filter="Все" type="button">
+      Все
+     </button>
+     <button class="filter-btn" data-filter="Каркасные дома" type="button">
+      Каркасные дома
+     </button>
+     <button class="filter-btn" data-filter="Фундаменты" type="button">
+      Фундаменты
+     </button>
+     <button class="filter-btn" data-filter="Кровля" type="button">
+      Кровля
+     </button>
+     <button class="filter-btn" data-filter="Отделка" type="button">
+      Отделка
+     </button>
+     <button class="filter-btn" data-filter="Окна и двери" type="button">
+      Окна и двери
+     </button>
+     <button class="filter-btn" data-filter="Фасады" type="button">
+      Фасады
+     </button>
+     <button class="filter-btn" data-filter="Террасы" type="button">
+      Террасы
+     </button>
+    </div>
+    <div class="gallery-grid" id="gallery-grid">
+     <button aria-label="Увеличить фото: Каркасные дома" class="gallery-item" data-category="Каркасные дома" data-src="../images/1.jpg" data-title="Каркасные дома · фото 1" type="button">
+      <img alt="Каркасные дома — фотография 1" loading="lazy" src="../images/1.jpg"/>
+      <span class="gallery-overlay">
+       <strong>
+        Каркасные дома
+       </strong>
+       <small>
+        Смотреть фото ↗
+       </small>
+      </span>
+     </button>
+     <button aria-label="Увеличить фото: Каркасные дома" class="gallery-item" data-category="Каркасные дома" data-src="../images/10.jpg" data-title="Каркасные дома · фото 10" type="button">
+      <img alt="Каркасные дома — фотография 10" loading="lazy" src="../images/10.jpg"/>
+      <span class="gallery-overlay">
+       <strong>
+        Каркасные дома
+       </strong>
+       <small>
+        Смотреть фото ↗
+       </small>
+      </span>
+     </button>
+     <button aria-label="Увеличить фото: Фундаменты" class="gallery-item" data-category="Фундаменты" data-src="../images/16.jpg" data-title="Фундаменты · фото 16" type="button">
+      <img alt="Фундаменты — фотография 16" loading="lazy" src="../images/16.jpg"/>
+      <span class="gallery-overlay">
+       <strong>
+        Фундаменты
+       </strong>
+       <small>
+        Смотреть фото ↗
+       </small>
+      </span>
+     </button>
+     <button aria-label="Увеличить фото: Кровля" class="gallery-item" data-category="Кровля" data-src="../images/19.jpg" data-title="Кровля · фото 19" type="button">
+      <img alt="Кровля — фотография 19" loading="lazy" src="../images/19.jpg"/>
+      <span class="gallery-overlay">
+       <strong>
+        Кровля
+       </strong>
+       <small>
+        Смотреть фото ↗
+       </small>
+      </span>
+     </button>
+     <button aria-label="Увеличить фото: Отделка" class="gallery-item" data-category="Отделка" data-src="../images/23.jpg" data-title="Отделка · фото 23" type="button">
+      <img alt="Отделка — фотография 23" loading="lazy" src="../images/23.jpg"/>
+      <span class="gallery-overlay">
+       <strong>
+        Отделка
+       </strong>
+       <small>
+        Смотреть фото ↗
+       </small>
+      </span>
+     </button>
+     <button aria-label="Увеличить фото: Окна и двери" class="gallery-item" data-category="Окна и двери" data-src="../images/24.jpg" data-title="Окна и двери · фото 24" type="button">
+      <img alt="Окна и двери — фотография 24" loading="lazy" src="../images/24.jpg"/>
+      <span class="gallery-overlay">
+       <strong>
+        Окна и двери
+       </strong>
+       <small>
+        Смотреть фото ↗
+       </small>
+      </span>
+     </button>
+     <button aria-label="Увеличить фото: Фасады" class="gallery-item" data-category="Фасады" data-src="../images/37.jpg" data-title="Фасады · фото 37" type="button">
+      <img alt="Фасады — фотография 37" loading="lazy" src="../images/37.jpg"/>
+      <span class="gallery-overlay">
+       <strong>
+        Фасады
+       </strong>
+       <small>
+        Смотреть фото ↗
+       </small>
+      </span>
+     </button>
+     <button aria-label="Увеличить фото: Террасы" class="gallery-item" data-category="Террасы" data-src="../images/46.jpg" data-title="Террасы · фото 46" type="button">
+      <img alt="Террасы — фотография 46" loading="lazy" src="../images/46.jpg"/>
+      <span class="gallery-overlay">
+       <strong>
+        Террасы
+       </strong>
+       <small>
+        Смотреть фото ↗
+       </small>
+      </span>
+     </button>
+     <button aria-label="Увеличить фото: Террасы" class="gallery-item" data-category="Террасы" data-src="../images/47.jpg" data-title="Террасы · фото 47" type="button">
+      <img alt="Террасы — фотография 47" loading="lazy" src="../images/47.jpg"/>
+      <span class="gallery-overlay">
+       <strong>
+        Террасы
+       </strong>
+       <small>
+        Смотреть фото ↗
+       </small>
+      </span>
+     </button>
+     <button aria-label="Увеличить фото: Фасады" class="gallery-item" data-category="Фасады" data-src="../images/55.jpg" data-title="Фасады · фото 55" type="button">
+      <img alt="Фасады — фотография 55" loading="lazy" src="../images/55.jpg"/>
+      <span class="gallery-overlay">
+       <strong>
+        Фасады
+       </strong>
+       <small>
+        Смотреть фото ↗
+       </small>
+      </span>
+     </button>
+     <button aria-label="Увеличить фото: Отделка" class="gallery-item" data-category="Отделка" data-src="../images/60.jpg" data-title="Отделка · фото 60" type="button">
+      <img alt="Отделка — фотография 60" loading="lazy" src="../images/60.jpg"/>
+      <span class="gallery-overlay">
+       <strong>
+        Отделка
+       </strong>
+       <small>
+        Смотреть фото ↗
+       </small>
+      </span>
+     </button>
+     <button aria-label="Увеличить фото: Кровля" class="gallery-item" data-category="Кровля" data-src="../images/63.jpg" data-title="Кровля · фото 63" type="button">
+      <img alt="Кровля — фотография 63" loading="lazy" src="../images/63.jpg"/>
+      <span class="gallery-overlay">
+       <strong>
+        Кровля
+       </strong>
+       <small>
+        Смотреть фото ↗
+       </small>
+      </span>
+     </button>
+    </div>
+    <div class="database-section">
+     <h2>
+      Проекты из базы данных
+     </h2>
+     <div class="dynamic-grid" id="projects-container">
+     </div>
+    </div>
+   </section>
+   <div aria-label="Просмотр фотографии" aria-modal="true" class="lightbox" hidden="" id="lightbox" role="dialog">
+    <button aria-label="Закрыть" class="lightbox-close" type="button">
+     ×
+    </button>
+    <img alt="Увеличенная фотография"/>
+    <p>
+    </p>
+   </div>
   </main>
-
-  <footer>
-    <p>Construction Company</p>
+  <footer class="site-footer">
+   <div class="container footer-inner">
+    <div>
+     <strong>
+      5 SEASONS
+     </strong>
+     <p>
+      Строим пространство для вашей жизни.
+     </p>
+    </div>
+    <div>
+     <a href="../pages/contacts.html">
+      Обсудить проект
+     </a>
+     <a href="../pages/admin.html">
+      Администратор
+     </a>
+    </div>
+   </div>
+   <div class="container copyright">
+    © 2026 5 Seasons. Все права защищены.
+   </div>
   </footer>
-
-  <script src="../js/portfolio.js"></script>
-</body>
+  <script defer="" src="../js/theme.js">
+  </script>
+  <script defer="" src="../js/portfolio.js">
+  </script>
+ </body>
 </html>

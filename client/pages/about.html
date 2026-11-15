@@ -1,109 +1,148 @@
-
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>О компании</title>
-
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/responsive.css">
-</head>
-
-<body>
-
-  <header>
-    <h1>О компании</h1>
-
-    <nav>
-      <a href="../index.html">Главная</a>
-      <a href="about.html">О компании</a>
-      <a href="services.html">Услуги</a>
-      <a href="portfolio.html">Портфолио</a>
-      <a href="contacts.html">Контакты</a>
-    </nav>
-  </header>
-
-  <main>
-
-    <section>
-      <h2 id="about-title">
-        О компании
-      </h2>
-
-      <p id="about-content">
-        Загрузка...
-      </p>
-    </section>
-
-
-    <section>
-      <h2>Опыт работы</h2>
-
-      <p>
-        Наша команда выполняет проекты
-        различной сложности и контролирует
-        качество работ на каждом этапе.
-      </p>
-    </section>
-
-
-    <section>
-      <h2>Наши преимущества</h2>
-
-      <ul>
-        <li>Профессиональный подход</li>
-        <li>Качественные материалы</li>
-        <li>Соблюдение сроков</li>
-        <li>Понятная коммуникация с клиентом</li>
-      </ul>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>Construction Company</p>
-  </footer>
-
-
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="5 Seasons — строительство домов, фундаменты, кровля, фасады и отделка. Консультация и заявка онлайн." name="description"/>
+  <title>
+   О компании | 5 Seasons
+  </title>
   <script>
-    async function loadAboutPage() {
-      try {
-        const response =
-          await fetch('/api/pages/about');
-
-        if (!response.ok) {
-          throw new Error(
-            'Failed to load page'
-          );
-        }
-
-        const page =
-          await response.json();
-
-        document
-          .getElementById('about-title')
-          .textContent =
-          page.title;
-
-        document
-          .getElementById('about-content')
-          .textContent =
-          page.content;
-
-      } catch (error) {
-        console.error(error);
-
-        document
-          .getElementById('about-content')
-          .textContent =
-          'Не удалось загрузить данные страницы.';
-      }
-    }
-
-    loadAboutPage();
+   try{if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark-theme')}catch(e){}
   </script>
-
-</body>
+  <link href="../css/style.css" rel="stylesheet"/>
+  <link href="../css/responsive.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header class="site-header">
+   <div class="header-inner">
+    <a aria-label="5 Seasons — главная" class="site-logo" href="../index.html">
+     <img class="site-logo-image" src="../images/logo.png" alt="Логотип 5 Seasons" width="104" height="100"/>
+    </a>
+    <button aria-controls="main-nav" aria-expanded="false" aria-label="Открыть меню" class="menu-toggle">
+     ☰
+    </button>
+    <nav aria-label="Основная навигация" class="main-nav" id="main-nav">
+     <a class="" href="../index.html">
+      Главная
+     </a>
+     <a class="active" href="about.html">
+      О компании
+     </a>
+     <a class="" href="services.html">
+      Услуги
+     </a>
+     <a class="" href="portfolio.html">
+      Портфолио
+     </a>
+     <a class="" href="contacts.html">
+      Контакты
+     </a>
+    </nav>
+    <button aria-label="Переключить тему" class="theme-toggle" id="theme-toggle" type="button">
+     <img alt="" id="theme-icon" src="../images/moon.png"/>
+    </button>
+   </div>
+  </header>
+  <main>
+   <section class="page-hero container">
+    <span class="eyebrow">
+     ЗНАКОМЬТЕСЬ С НАМИ
+    </span>
+    <h1>
+     5 Seasons.
+     <em>
+      Создаём основательно.
+     </em>
+    </h1>
+    <p>
+     Строительство — это ответственность перед людьми, которые будут жить и работать в созданных пространствах.
+    </p>
+   </section>
+   <section class="container section about-layout">
+    <img alt="Строительный проект 5 Seasons" src="../images/10.jpg"/>
+    <div>
+     <span class="eyebrow">
+      НАШ ПОДХОД
+     </span>
+     <h2 id="about-title">
+      Строим на доверии
+     </h2>
+     <p id="about-content">
+      Мы выполняем строительные и ремонтные работы, уделяя внимание надёжности, удобству и аккуратности.
+     </p>
+     <p>
+      Каждый проект начинается с обсуждения задач и заканчивается вниманием к деталям. Мы стремимся сделать процесс понятным, а результат — долговечным.
+     </p>
+     <a class="btn btn-primary" href="contacts.html">
+      Связаться с нами ↗
+     </a>
+    </div>
+   </section>
+   <section class="surface section">
+    <div class="container advantages-grid">
+     <article>
+      <span>
+       01
+      </span>
+      <h3>
+       Планирование
+      </h3>
+      <p>
+       Обсуждаем задачи и последовательность работ.
+      </p>
+     </article>
+     <article>
+      <span>
+       02
+      </span>
+      <h3>
+       Мастерство
+      </h3>
+      <p>
+       Внимательно относимся к технологиям и деталям.
+      </p>
+     </article>
+     <article>
+      <span>
+       03
+      </span>
+      <h3>
+       Сотрудничество
+      </h3>
+      <p>
+       Поддерживаем открытый диалог с заказчиком.
+      </p>
+     </article>
+    </div>
+   </section>
+  </main>
+  <footer class="site-footer">
+   <div class="container footer-inner">
+    <div>
+     <strong>
+      5 SEASONS
+     </strong>
+     <p>
+      Строим пространство для вашей жизни.
+     </p>
+    </div>
+    <div>
+     <a href="../pages/contacts.html">
+      Обсудить проект
+     </a>
+     <a href="../pages/admin.html">
+      Администратор
+     </a>
+    </div>
+   </div>
+   <div class="container copyright">
+    © 2026 5 Seasons. Все права защищены.
+   </div>
+  </footer>
+  <script defer="" src="../js/theme.js">
+  </script>
+  <script defer="" src="../js/pages.js">
+  </script>
+ </body>
 </html>

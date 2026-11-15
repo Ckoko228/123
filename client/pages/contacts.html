@@ -1,148 +1,177 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Контакты</title>
-
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/responsive.css">
-</head>
-
-<body>
-
-  <header>
-    <h1>Контакты</h1>
-
-    <nav>
-      <a href="../index.html">Главная</a>
-      <a href="about.html">О компании</a>
-      <a href="services.html">Услуги</a>
-      <a href="portfolio.html">Портфолио</a>
-      <a href="contacts.html">Контакты</a>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="5 Seasons — строительство домов, фундаменты, кровля, фасады и отделка. Консультация и заявка онлайн." name="description"/>
+  <title>
+   Контакты | 5 Seasons
+  </title>
+  <script>
+   try{if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark-theme')}catch(e){}
+  </script>
+  <link href="../css/style.css" rel="stylesheet"/>
+  <link href="../css/responsive.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header class="site-header">
+   <div class="header-inner">
+    <a aria-label="5 Seasons — главная" class="site-logo" href="../index.html">
+     <img class="site-logo-image" src="../images/logo.png" alt="Логотип 5 Seasons" width="104" height="100"/>
+    </a>
+    <button aria-controls="main-nav" aria-expanded="false" aria-label="Открыть меню" class="menu-toggle">
+     ☰
+    </button>
+    <nav aria-label="Основная навигация" class="main-nav" id="main-nav">
+     <a class="" href="../index.html">
+      Главная
+     </a>
+     <a class="" href="about.html">
+      О компании
+     </a>
+     <a class="" href="services.html">
+      Услуги
+     </a>
+     <a class="" href="portfolio.html">
+      Портфолио
+     </a>
+     <a class="active" href="contacts.html">
+      Контакты
+     </a>
     </nav>
+    <button aria-label="Переключить тему" class="theme-toggle" id="theme-toggle" type="button">
+     <img alt="" id="theme-icon" src="../images/moon.png"/>
+    </button>
+   </div>
   </header>
-
   <main>
-
-    <section class="contact-section">
-
-      <h2>Связаться с нами</h2>
-
-      <p>
-        Оставьте заявку, и мы свяжемся с вами для консультации.
-      </p>
-
-      <form id="contact-form" class="contact-form">
-
-        <div>
-          <label for="name">Имя:</label>
-
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-          >
-        </div>
-
-        <div>
-          <label for="phone">Телефон:</label>
-
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            required
-          >
-        </div>
-
-        <div>
-          <label for="email">Email:</label>
-
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-          >
-        </div>
-
-        <div>
-          <label for="service_type">Услуга:</label>
-
-          <select
-            id="service_type"
-            name="service_type"
-            required
-          >
-            <option value="">
-              Выберите услугу
-            </option>
-
-            <option value="Строительство частных домов">
-              Строительство частных домов
-            </option>
-
-            <option value="Коммерческое строительство">
-              Коммерческое строительство
-            </option>
-
-            <option value="Ремонт и отделка">
-              Ремонт и отделка
-            </option>
-
-            <option value="Проектирование">
-              Проектирование
-            </option>
-
-            <option value="Реконструкция зданий">
-              Реконструкция зданий
-            </option>
-          </select>
-        </div>
-
-        <div>
-          <label for="message">Сообщение:</label>
-
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            required
-          ></textarea>
-        </div>
-
-        <div>
-          <label>
-            <input
-              type="checkbox"
-              id="personal_data_consent"
-              required
-            >
-
-            Я согласен на обработку персональных данных
-          </label>
-        </div>
-
-        <button type="submit">
-          Отправить заявку
-        </button>
-
-      </form>
-
-      <p id="form-message"></p>
-
-    </section>
-
+   <section class="page-hero container">
+    <span class="eyebrow">
+     СВЯЖИТЕСЬ С НАМИ
+    </span>
+    <h1>
+     Расскажите нам
+     <em>
+      о своём проекте.
+     </em>
+    </h1>
+    <p id="contacts-content">
+     Заполните форму — мы получим вашу заявку и сможем обсудить детали.
+    </p>
+   </section>
+   <section class="container section compact contact-layout">
+    <div class="contact-aside">
+     <h2 id="contacts-title">
+      Начнём разговор?
+     </h2>
+     <p>
+      Расскажите, что вы хотите построить или обновить. Укажите удобные контактные данные для обратной связи.
+     </p>
+     <img alt="Строительные работы" src="../images/63.jpg"/>
+    </div>
+    <div class="form-panel">
+     <h2>
+      Оставить заявку
+     </h2>
+     <form class="contact-form" id="contact-form">
+      <div>
+       <label for="name">
+        Имя:
+       </label>
+       <input id="name" name="name" required="" type="text"/>
+      </div>
+      <div>
+       <label for="phone">
+        Телефон:
+       </label>
+       <input id="phone" name="phone" required="" type="tel"/>
+      </div>
+      <div>
+       <label for="email">
+        Email:
+       </label>
+       <input id="email" name="email" required="" type="email"/>
+      </div>
+      <div>
+       <label for="service_type">
+        Услуга:
+       </label>
+       <select id="service_type" name="service_type" required="">
+        <option value="">
+         Выберите услугу
+        </option>
+        <option value="Фундаменты">
+         Фундаменты
+        </option>
+        <option value="Кровельные работы">
+         Кровельные работы
+        </option>
+        <option value="Каркасные дома">
+         Каркасные дома
+        </option>
+        <option value="Внутренняя и внешняя отделка">
+         Внутренняя и внешняя отделка
+        </option>
+        <option value="Окна и двери">
+         Окна и двери
+        </option>
+        <option value="Фасады">
+         Фасады
+        </option>
+        <option value="Террасы">
+         Террасы
+        </option>
+       </select>
+      </div>
+      <div>
+       <label for="message">
+        Сообщение:
+       </label>
+       <textarea id="message" name="message" required="" rows="5"></textarea>
+      </div>
+      <div>
+       <label>
+        <input id="personal_data_consent" required="" type="checkbox"/>
+        Я согласен на обработку персональных данных
+       </label>
+      </div>
+      <button type="submit">
+       Отправить заявку
+      </button>
+     </form>
+     <p aria-live="polite" id="form-message" role="status">
+     </p>
+    </div>
+   </section>
   </main>
-
-  <footer>
-    <p>Construction Company</p>
+  <footer class="site-footer">
+   <div class="container footer-inner">
+    <div>
+     <strong>
+      5 SEASONS
+     </strong>
+     <p>
+      Строим пространство для вашей жизни.
+     </p>
+    </div>
+    <div>
+     <a href="../pages/contacts.html">
+      Обсудить проект
+     </a>
+     <a href="../pages/admin.html">
+      Администратор
+     </a>
+    </div>
+   </div>
+   <div class="container copyright">
+    © 2026 5 Seasons. Все права защищены.
+   </div>
   </footer>
-
-  <script src="../js/forms.js"></script>
-
-</body>
+  <script defer="" src="../js/theme.js">
+  </script>
+  <script defer="" src="../js/forms.js">
+  </script>
+  <script defer="" src="../js/pages.js">
+  </script>
+ </body>
 </html>
